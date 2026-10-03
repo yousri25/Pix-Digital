@@ -15,7 +15,7 @@ A single-page revision website for the Pix / C2i digital skills course.
 
 ## How to use
 
-1. Download `pix-revision.html`.
+1. Download `Index.html`.
 2. Open it in any web browser.
 
 No install and no internet needed, except for the Google font (a default font is used without it).
