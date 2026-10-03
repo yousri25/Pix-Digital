@@ -5,3 +5,4 @@ Site de révision en une seule page pour le cours Pix / C2i (réseaux, sécurit�
 ## Utilisation
 
 Télécharge `index.html` et ouvre-le dans un navigateur.
+Lien Direct : https://yousri25.github.io/Pix-Digital/
