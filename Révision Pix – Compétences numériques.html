@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Révision Pix – Compétences numériques</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#1e2a44;--mut:#5b6788;--line:#dde1ee;--d1:#f5a142;--d2:#4fc98a;--d3:#1fa4f2;--d4:#ec4a8f;--d5:#5b49a8;--hl:#fff3b0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="dark"]{--bg:#12182a;--card:#1b2340;--ink:#e8ecf8;--mut:#9aa6c8;--line:#2d3760;--hl:#4a4310}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12182a;--card:#1b2340;--ink:#e8ecf8;--mut:#9aa6c8;--line:#2d3760;--hl:#4a4310}}
+html{scroll-padding-top:calc(60px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Nunito,system-ui,sans-serif}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border-bottom:1px solid var(--line);display:flex;gap:4px;overflow-x:auto;padding:8px 12px;align-items:center}
+nav a{white-space:nowrap;color:var(--ink);text-decoration:none;padding:6px 12px;border-radius:99px;font-weight:600;font-size:14px}
+nav a:hover,nav a:focus-visible{background:var(--line);outline:none}
+nav button{margin-left:auto;border:1px solid var(--line);background:none;color:var(--ink);border-radius:99px;padding:5px 12px;cursor:pointer;font:inherit;font-size:14px}
+header{padding:48px 20px 28px;max-width:900px;margin:auto}
+h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.1;margin:0 0 12px;font-weight:800}
+header p{color:var(--mut);max-width:60ch;margin:0}
+.bar{display:flex;height:10px;border-radius:5px;overflow:hidden;margin-top:22px}.bar i{flex:1}
+main{max-width:900px;margin:auto;padding:0 20px 80px}
+section{margin-top:56px}
+h2{font-size:1.7rem;margin:0 0 6px;padding-left:14px;border-left:8px solid var(--c,var(--d3))}
+h3{margin:28px 0 8px;font-size:1.15rem}
+.sub{color:var(--mut);margin:0 0 18px;padding-left:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:12px 0}
+.def{background:var(--hl);border-radius:8px;padding:10px 14px;margin:10px 0}
+.def b{display:block}
+.warn{border-left:5px solid var(--d4);background:var(--card);padding:10px 14px;margin:12px 0;border-radius:0 8px 8px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.grid .card{margin:0}
+table{width:100%;border-collapse:collapse;font-size:14.5px;display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--card)}
+figure{margin:16px 0;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{color:var(--mut);font-size:14px;margin-top:6px}
+svg text{fill:var(--ink);font-family:Nunito,system-ui,sans-serif}
+.k{fill:var(--card);stroke:var(--ink);stroke-width:1.5}
+code{font-family:ui-monospace,Menlo,monospace;background:var(--line);padding:1px 6px;border-radius:5px;font-size:.92em}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0}
+summary{cursor:pointer;font-weight:600}
+details p{margin:8px 0 0;color:var(--mut)}
+.tag{display:inline-block;font-size:12px;font-weight:800;color:#fff;border-radius:6px;padding:1px 8px;margin-right:6px;vertical-align:middle}
+ul{padding-left:20px;margin:6px 0}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body>
+<nav>
+<a href="#pix">Carte Pix</a><a href="#base">Bases &amp; unités</a><a href="#net">Réseaux</a><a href="#sec">Sécurité</a><a href="#fmt">Formats</a><a href="#data">Données</a><a href="#c2i">Diapos C2i D1</a><a href="#d2">Domaine 2</a><a href="#lab">TP &amp; glossaire</a><a href="#quiz">Quiz</a>
+<button id="th" aria-label="Changer de thème">Thème</button></nav>
+<header><h1>Pix compétences numériques : révision complète</h1>
+<p>Tout le contenu de tes quatre fichiers au même endroit : le référentiel Pix (5 domaines), les cours sur les réseaux, la sécurité, l'interopérabilité, les formats et les données, et le support pédagogique des domaines 2/4/5. Les blancs des fiches de cours sont complétés.</p>
+<div class="bar"><i style="background:var(--d1)"></i><i style="background:var(--d2)"></i><i style="background:var(--d3)"></i><i style="background:var(--d4)"></i><i style="background:var(--d5)"></i></div></header>
+<main>
+
+<section id="pix" style="--c:var(--d1)"><h2>1. Le référentiel Pix</h2><p class="sub">5 domaines, 16 compétences. Chacune est évaluée sur les niveaux 1 à 8.</p>
+<div class="grid">
+<div class="card" style="border-top:5px solid var(--d1)"><b>D1 Informations et données</b><br>1.1 Mener une recherche et une veille d'information<br>1.2 Gérer des données<br>1.3 Traiter des données</div>
+<div class="card" style="border-top:5px solid var(--d2)"><b>D2 Communication et collaboration</b><br>2.1 Interagir<br>2.2 Partager et publier<br>2.3 Collaborer<br>2.4 S'insérer dans le monde numérique</div>
+<div class="card" style="border-top:5px solid var(--d3)"><b>D3 Création de contenu</b><br>3.1 Développer des documents textuels<br>3.2 Développer des documents multimédia<br>3.3 Adapter les documents à leur finalité<br>3.4 Programmer</div>
+<div class="card" style="border-top:5px solid var(--d4)"><b>D4 Protection et sécurité</b><br>4.1 Sécuriser l'environnement numérique<br>4.2 Protéger les données personnelles et la vie privée<br>4.3 Protéger la santé, le bien-être et l'environnement</div>
+<div class="card" style="border-top:5px solid var(--d5)"><b>D5 Environnement numérique</b><br>5.1 Résoudre des problèmes techniques<br>5.2 Évoluer dans un environnement numérique</div></div>
+<p>Tes fiches de cours correspondent ainsi : <b>D5.1</b> (espace de travail, réseaux) et <b>D5.3</b> (interopérabilité, formats) relèvent de 5.2 ; <b>D1.2</b> (sécurité) de 4.1 ; <b>D1.4</b> (enregistrement, archives) de 1.2.</p></section>
+
+<section id="base" style="--c:var(--d5)"><h2>2. Bases et unités de mesure de l'information</h2><p class="sub">Cours D5.1, parties 1 et 2</p>
+<div class="def"><b>Informatique (information + automatique)</b>Ensemble des sciences et techniques en rapport avec le traitement de l'information.</div>
+<div class="def"><b>Internet</b>Le réseau informatique mondial : une multitude de réseaux interconnectés. Il transporte des <i>services</i> (web, messagerie, ...).</div>
+<div class="warn"><b>Attention à la confusion</b> : Internet (le réseau) n'est pas le web (un de ses services).</div>
+<div class="def"><b>(N)TIC</b>Technologies de l'Information et de la Communication : techniques de traitement et de transmission de l'information, issues de l'informatique, d'Internet et des télécommunications. <b>TICE</b> = idem, pour l'Éducation.</div>
+<h3>Le codage binaire</h3>
+<p>L'ordinateur ne manipule que 2 états. Un <b>bit</b> (binary digit) vaut 0 ou 1. Un <b>octet</b> = 8 bits et code 2<sup>8</sup> = <b>256</b> valeurs : n bits donnent 2<sup>n</sup> valeurs.</p>
+<figure><svg viewBox="0 0 700 150" role="img" aria-label="Des bits à l'octet">
+<g class="k"><rect x="20" y="40" width="40" height="40"/><rect x="60" y="40" width="40" height="40"/><rect x="100" y="40" width="40" height="40"/><rect x="140" y="40" width="40" height="40"/><rect x="180" y="40" width="40" height="40"/><rect x="220" y="40" width="40" height="40"/><rect x="260" y="40" width="40" height="40"/><rect x="300" y="40" width="40" height="40"/></g>
+<text x="32" y="67" font-size="20">0</text><text x="72" y="67" font-size="20">1</text><text x="112" y="67" font-size="20">0</text><text x="152" y="67" font-size="20">0</text><text x="192" y="67" font-size="20">0</text><text x="232" y="67" font-size="20">0</text><text x="272" y="67" font-size="20">0</text><text x="312" y="67" font-size="20">1</text>
+<text x="20" y="108" font-size="14">8 bits = 1 octet = 1 byte (ici : 01000001 = lettre A)</text>
+<text x="380" y="50" font-size="14">1 bit → 2 valeurs</text><text x="380" y="72" font-size="14">2 bits → 4 valeurs</text><text x="380" y="94" font-size="14">8 bits → 256 valeurs</text>
+<text x="20" y="135" font-size="13" style="fill:var(--mut)">Un octet peut stocker un caractère, un petit entier, ou un pixel d'une image en 256 couleurs.</text></svg><figcaption>Du bit à l'octet.</figcaption></figure>
+<table><tr><th>Unité</th><th>Valeur</th><th>Ordre de grandeur</th></tr><tr><td>ko (kilo-octet)</td><td>1 000 o (en réalité 1 024 = 2<sup>10</sup>)</td><td>Texte de 30 pages : ~200 ko</td></tr><tr><td>Mo</td><td>1 000 ko</td><td>Photo JPG 5 Mpx : ~2 Mo ; MP3 de 3 min : ~3 Mo</td></tr><tr><td>Go</td><td>1 000 Mo</td><td>DVD : 4,7 Go</td></tr><tr><td>To</td><td>1 000 Go</td><td></td></tr></table>
+<div class="warn"><b>Byte et bit :</b> 1 Byte = 8 bit. MB = Mo. Les débits sont en <b>bits</b> par seconde, les tailles de fichiers en <b>octets</b>.</div>
+<h3>Bande passante (débit)</h3>
+<p><b>Bande passante</b> (par abus de langage) = débit d'informations, en kbps (kilobits par seconde). Le débit réel est toujours inférieur (encombrement du réseau).</p>
+<div class="card"><b>Exemple.</b> ADSL 1024k, photo de 2 Mo.<br>1024 kbit/s ÷ 8 = <b>128 ko/s</b>. 2 Mo = 2048 ko. Temps = 2048 ÷ 128 = <b>16 s</b>.</div>
+<h3>Connexions sans fil</h3>
+<div class="grid"><div class="card"><b>Wi-Fi</b> (IEEE 802.11) : technologie de réseau local sans fil. Permet de connecter un appareil au réseau et à Internet via une borne ou une box, dans un bâtiment.</div><div class="card"><b>Bluetooth</b> : technologie sans fil courte distance. Sert à relier des appareils proches : casque, souris, téléphone, imprimante, manette.</div></div>
+<div class="def"><b>Chemin d'accès</b>Liste des dossiers à parcourir pour atteindre un fichier. Si elle part de la racine : <b>chemin absolu</b> (<code>/home/moi/doc.odt</code>) ; sinon <b>chemin relatif</b> (<code>../doc.odt</code>).</div></section>
+
+<section id="net" style="--c:var(--d3)"><h2>3. Réseaux et Internet</h2><p class="sub">Cours D5.1, partie 3</p>
+<div class="def"><b>Réseau informatique</b>Ensemble d'équipements reliés pour échanger des informations. <b>Réseau local</b> : une pièce ou un bâtiment. <b>Réseau étendu</b> : grande zone géographique ; Internet en est un. Un réseau permet le <b>partage de ressources</b> (fichiers, imprimante, accès à Internet) et la <b>communication</b>.</div>
+<h3>Client-serveur et pair-à-pair</h3>
+<figure><svg viewBox="0 0 700 230" role="img" aria-label="Client serveur et pair à pair">
+<text x="90" y="20" font-size="15" font-weight="800">Client / serveur</text>
+<g class="k"><rect x="130" y="85" width="90" height="50" rx="6"/><rect x="20" y="40" width="70" height="38" rx="6"/><rect x="260" y="40" width="70" height="38" rx="6"/><rect x="20" y="150" width="70" height="38" rx="6"/><rect x="260" y="150" width="70" height="38" rx="6"/></g>
+<text x="147" y="115" font-size="14">Serveur</text><text x="35" y="64" font-size="13">Client</text><text x="275" y="64" font-size="13">Client</text><text x="35" y="174" font-size="13">Client</text><text x="275" y="174" font-size="13">Client</text>
+<path d="M90 70 L130 92 M260 70 L220 92 M90 160 L130 128 M260 160 L220 128" stroke="var(--ink)" fill="none"/>
+<text x="20" y="215" font-size="12">1 requête → 2 réponse</text>
+<text x="480" y="20" font-size="15" font-weight="800">Pair-à-pair</text>
+<g class="k"><rect x="400" y="45" width="70" height="38" rx="6"/><rect x="590" y="45" width="70" height="38" rx="6"/><rect x="400" y="150" width="70" height="38" rx="6"/><rect x="590" y="150" width="70" height="38" rx="6"/></g>
+<text x="420" y="69" font-size="13">Pair</text><text x="610" y="69" font-size="13">Pair</text><text x="420" y="174" font-size="13">Pair</text><text x="610" y="174" font-size="13">Pair</text>
+<path d="M470 64 H590 M435 83 V150 M625 83 V150 M470 169 H590 M470 83 L590 150 M590 83 L470 150" stroke="var(--ink)" stroke-dasharray="4 3" fill="none"/>
+<text x="400" y="215" font-size="12">tous les ordinateurs ont le même rôle</text></svg><figcaption>Le serveur répond aux requêtes ; en P2P chaque machine est à la fois client et serveur (partage de fichiers).</figcaption></figure>
+<ul><li><b>Serveur</b> : ordinateur équipé d'un logiciel serveur qui répond aux requêtes des clients. Exemples : serveur web (pages), serveur FTP (téléchargement/dépôt de fichiers), serveur de messagerie.</li><li>Il faut un <b>annuaire d'utilisateurs avec mots de passe</b> (authentification) et des <b>droits spécifiques</b> par utilisateur ou groupe.</li></ul>
+<h3>Les composants d'Internet</h3>
+<ul><li><b>Supports</b> : câbles (signaux électriques), atmosphère (ondes radio), fibres optiques (ondes lumineuses).</li><li><b>Liaison entre réseaux</b> : <b>routeur</b> (aiguillage des données), <b>concentrateur (hub) / commutateur (switch)</b> (relient les éléments d'un réseau), <b>passerelle</b> (relie deux réseaux de nature différente, ex. réseau local et Internet).</li><li><b>Extrémités</b> : ordinateurs de particuliers (connexion temporaire), ordinateurs « hôtes » (toujours connectés, ex. serveur web), périphériques (imprimante).</li></ul>
+<p>Aucun élément d'Internet ne connaît le réseau dans son ensemble.</p>
+<h3>Les protocoles</h3>
+<div class="def"><b>Protocole réseau</b>Ensemble de règles que les équipements suivent pour communiquer. <b>TCP/IP</b> gère le transport : il découpe les données en <b>paquets</b>, les achemine (parfois par des routes différentes) et les rassemble à l'arrivée. Les <b>protocoles d'applications</b> servent chacun un service précis.</div>
+<figure><svg viewBox="0 0 700 170" role="img" aria-label="Requête HTTP">
+<g class="k"><rect x="20" y="50" width="120" height="60" rx="8"/><rect x="560" y="50" width="120" height="60" rx="8"/><ellipse cx="350" cy="80" rx="110" ry="40"/></g>
+<text x="40" y="85" font-size="15">Navigateur</text><text x="578" y="85" font-size="15">Serveur web</text><text x="318" y="85" font-size="15">Internet</text>
+<path d="M140 65 H240" stroke="var(--d3)" stroke-width="3"/><path d="M460 65 H560" stroke="var(--d3)" stroke-width="3"/>
+<path d="M560 98 H460 M240 98 H140" stroke="var(--d4)" stroke-width="3"/>
+<text x="30" y="30" font-size="13">1. Requête HTTP (URL + mon adresse IP)</text><text x="30" y="145" font-size="13">3. Réponse HTTP (la page web)</text><text x="260" y="145" font-size="13">2. TCP/IP transporte les paquets dans les deux sens</text></svg><figcaption>Consulter une page : requête → transport → réponse.</figcaption></figure>
+<table><tr><th>Protocole</th><th>Rôle</th></tr>
+<tr><td><b>TCP/IP</b></td><td>Transport des données en paquets ; réassemblés à l'arrivée</td></tr>
+<tr><td><b>HTTP(S)</b></td><td>Pages web ; le S indique la version sécurisée (chiffrée)</td></tr>
+<tr><td><b>FTP</b></td><td>Transfert (dépôt/téléchargement) de fichiers</td></tr>
+<tr><td><b>SMTP</b></td><td>Envoi du courrier électronique vers les serveurs de messagerie</td></tr>
+<tr><td><b>POP3</b></td><td>Récupération du courrier : le télécharge sur ta machine</td></tr>
+<tr><td><b>IMAP</b></td><td>Consultation du courrier laissé sur le serveur, synchronisé entre appareils</td></tr>
+<tr><td><b>DHCP</b></td><td>Donne automatiquement sa configuration réseau (IP...) à un appareil</td></tr></table>
+<div class="def"><b>Adresse IP</b>Identifie chaque machine sur Internet : 4 entiers de 0 à 255 (4 × 8 bits) séparés par des points, ex. <code>74.125.39.106</code>.</div>
+<div class="def"><b>URL (Uniform Resource Locator)</b>Format d'adresse qui localise une ressource : protocole + nom de domaine + chemin, ex. <code>https://www.google.fr/page</code>.</div>
+<div class="def"><b>DNS (Domain Name System)</b>Traduit un nom de domaine en adresse IP. Saisir 74.125.39.106 donne le même site que www.google.fr.</div>
+<h3>Services, intranet, extranet</h3>
+<ul><li><b>« internet »</b> (minuscule) = des réseaux interconnectés quelconques ; <b>Internet</b> = le réseau mondial.</li><li><b>Web</b> : pages hypertextes. <b>Courrier électronique</b>. <b>Messagerie instantanée</b> : discussion en temps réel.</li><li><b>Intranet</b> : réseau privé d'une organisation utilisant les technologies d'Internet, fermé aux extérieurs.</li><li><b>Extranet</b> : intranet ouvert en partie, avec authentification, à des partenaires (clients, fournisseurs).</li></ul>
+<h3>Se connecter</h3>
+<div class="def"><b>FAI (fournisseur d'accès à Internet)</b>Entreprise qui te donne accès à Internet (abonnement). Il faut un FAI, un modem ou une box, et un support.</div>
+<table><tr><th>Accès</th><th>À retenir</th></tr>
+<tr><td>RTC (ligne téléphonique)</td><td>Ligne analogique, le <b>modem</b> convertit numérique ↔ analogique ; 56 kbit/s ; ligne occupée</td></tr>
+<tr><td>ADSL</td><td>Haut débit asymétrique ; fréquences différentes de la voix, donc téléphone libre</td></tr>
+<tr><td>Câble</td><td>Réseau TV + modem ; surtout les grandes villes</td></tr>
+<tr><td>Fibre optique</td><td>Très haut débit ; coûteux à déployer</td></tr>
+<tr><td>Satellite</td><td>Zones isolées ; il faut une parabole</td></tr>
+<tr><td>3G+ / mobile</td><td>Clé avec carte SIM, via le réseau de téléphonie mobile</td></tr></table>
+<ul><li><b>Box</b> (Livebox, Freebox...) = modem ADSL + routeur : crée un réseau local, Wi-Fi, partage de fichiers, téléphonie IP, TV.</li><li><b>Serveur mandataire (proxy)</b> : intermédiaire entre ton réseau local et Internet. Il transmet ta requête et renvoie la réponse. Ton IP est masquée : seule celle du proxy apparaît dans les logs du service.</li><li><b>Wi-Fi public</b> : parfois identifiant ou carte prépayée. Tu n'es <b>pas anonyme</b> : ta carte réseau a une <b>adresse MAC</b> unique qui peut être mémorisée.</li></ul></section>
+
+<section id="sec" style="--c:var(--d4)"><h2>4. Sécurité</h2><p class="sub">Cours D1.2 + Pix 4.1 à 4.3</p>
+<h3>Les risques en un coup d'œil</h3>
+<div class="grid"><div class="card"><b>Maladresse / défaillance</b><br>Parade : <b>sauvegardes</b> régulières.</div><div class="card"><b>Indiscrétion</b><br>Cacher les fichiers, limiter les droits d'accès.</div><div class="card"><b>Publicité / pourriel</b><br>Envahissant, rarement dangereux.</div><div class="card"><b>Arnaques</b><br>Usurpation d'identité, canulars, hameçonnage.</div><div class="card"><b>Attaques</b><br>Pirates, logiciels malveillants.</div></div>
+<h3>Les désagréments</h3>
+<div class="def"><b>Pourriel (spam)</b>Publicité par courriel non sollicitée (toucher beaucoup de monde à moindre coût). L'envoi en masse utilise des fichiers d'adresses récupérées à ton insu. La publicité d'entreprise légitime est collectée avec ton accord et permet de se désabonner.</div>
+<div class="def"><b>Fenêtre surgissante (pop-up)</b>Fenêtre qui surgit soudainement, le plus souvent publicitaire. Deux catégories : celles d'une page visitée (bloquables dans le navigateur) et celles d'un <b>publiciel (adware)</b> installé avec un logiciel gratuit (utiliser un anti-espion).</div>
+<h3>Les arnaques</h3>
+<div class="def"><b>Canular (hoax)</b>Faux message qu'on demande de diffuser : alerte virus, chaîne de solidarité, promesse d'argent, pétition. Ne pas diffuser : surcharge du réseau et fausses rumeurs. Vérifier sur un site recensant les canulars (ex. Hoaxbuster).</div>
+<div class="def"><b>Hameçonnage (phishing)</b>Fraude où l'expéditeur se fait passer pour un tiers de confiance (banque, administration) afin de soutirer des renseignements personnels, par courriel, faux sites web ou autres moyens.</div>
+<figure><svg viewBox="0 0 700 210" role="img" aria-label="Indices d'hameçonnage">
+<rect class="k" x="20" y="15" width="400" height="180" rx="8"/>
+<text x="35" y="40" font-size="13" style="fill:var(--mut)">De : service@banque-secure-update.exemple</text>
+<text x="35" y="70" font-size="14" font-weight="800">Votre compte sera fermé sous 24 h !</text>
+<text x="35" y="95" font-size="13">Cher client, confirmez vos coordonnées :</text>
+<text x="35" y="120" font-size="13" style="fill:#2b6fd6;text-decoration:underline">http://banque.login-secure.exemple/confirmer</text>
+<rect x="35" y="140" width="130" height="34" rx="6" fill="var(--d4)"/><text x="48" y="162" font-size="13" style="fill:#fff">facture.zip</text>
+<g font-size="13"><text x="445" y="45" font-weight="800">Indices suspects</text><text x="445" y="75">① Adresse d'expéditeur bizarre</text><text x="445" y="100">② Urgence artificielle</text><text x="445" y="125">③ Lien ≠ vrai domaine</text><text x="445" y="150">④ Pièce jointe inattendue</text><text x="445" y="175">⑤ Demande inhabituelle de données</text></g></svg><figcaption>Exercice Pix 4.1 : repérer les indices.</figcaption></figure>
+<h3>Attaques et logiciels malveillants</h3>
+<div class="def"><b>Hacker</b>Expert en informatique qui explore les systèmes. Un <b>cracker / pirate</b> est un hacker qui agit de façon illégale ou non éthique.</div>
+<div class="def"><b>Logiciel malveillant (malware)</b>Logiciel conçu pour nuire ou espionner. Se transmet par le réseau ou un support contaminé (clé USB, CD).</div>
+<table><tr><th>Type</th><th>Définition</th><th>Effets possibles</th></tr>
+<tr><td><b>Virus</b></td><td>Programme qui s'implante dans un autre et se duplique ; se déclenche à l'exécution du programme infecté ou lors d'un événement (date, activation à distance)</td><td>Messages anodins, perturbation de l'écran ou de la souris, destruction de données</td></tr>
+<tr><td><b>Ver</b></td><td>Programme indépendant qui se propage seul (courriel, page web, réseau)</td><td>Saturer les ressources, voler/détruire des données, ouvrir une porte dérobée, ralentir le réseau</td></tr>
+<tr><td><b>Cheval de Troie</b></td><td>Programme d'apparence inoffensive qui cache une fonction malveillante ; l'infection suit l'ouverture d'un fichier contaminé. Il ne se reproduit pas</td><td>Ouvrir une porte dérobée, voler des mots de passe, collecter/falsifier des données</td></tr>
+<tr><td><b>Logiciel espion</b></td><td>Collecte tes données à ton insu, souvent installé avec un gratuiciel ou partagiciel (personne ne lit la licence !)</td><td>Infection → collecte → transmission à un tiers</td></tr></table>
+<h3>La protection</h3>
+<div class="def"><b>Antivirus</b>Logiciel qui détecte, bloque et supprime les logiciels malveillants en comparant les fichiers à une base de <b>signatures virales</b> (le code spécifique laissé par un virus). Trois fonctions : <b>protection résidente</b> (analyse tout nouveau fichier), <b>scanner</b> (analyse un support à la demande), <b>mise à jour</b> automatique des signatures. En cas de détection : il <b>répare</b>, met en <b>quarantaine</b> ou <b>supprime</b> le fichier.</div>
+<figure><svg viewBox="0 0 700 150" role="img" aria-label="Pare-feu">
+<g class="k"><ellipse cx="80" cy="75" rx="60" ry="35"/><rect x="290" y="30" width="26" height="90" fill="#c44"/><rect x="480" y="50" width="110" height="50" rx="6"/></g>
+<text x="52" y="80" font-size="15">Internet</text><text x="262" y="20" font-size="13">Pare-feu</text><text x="496" y="80" font-size="14">Ton PC / réseau</text>
+<path d="M140 60 H288" stroke="var(--d4)" stroke-width="3"/><path d="M318 90 H478" stroke="var(--d2)" stroke-width="3"/>
+<text x="150" y="52" font-size="12">bloqué</text><text x="340" y="82" font-size="12">autorisé</text></svg><figcaption>Le pare-feu filtre les échanges entre le réseau et l'ordinateur.</figcaption></figure>
+<div class="def"><b>Pare-feu (firewall)</b>Filtre matériel ou logiciel qui contrôle le trafic réseau pour protéger les données sensibles (mots de passe, identités) contre les intrusions et les logiciels qui pourraient prendre le contrôle de l'ordinateur.</div>
+<h3>Protéger ses fichiers</h3>
+<div class="def"><b>Confidentialité</b>Garantie que l'information n'est accessible qu'aux personnes autorisées.</div><div class="def"><b>Intégrité</b>Garantie que l'information est exacte et complète, sans altération lors du traitement, de la conservation ou de la transmission.</div>
+<ul><li>Ne pas le <b>voir</b> → le cacher. Ne pas y <b>accéder</b> → refuser l'accès en lecture. Ne pas le <b>modifier</b> → refuser l'écriture / lecture seule.</li><li><b>Fichier caché</b> = attribut « Caché » + options du dossier qui n'affichent pas les fichiers cachés. Cachette faible : réactiver « afficher les fichiers cachés » le rend visible.</li><li>Droits en réseau, par propriétaire / groupe / tous : <b>lecture, écriture, exécution</b>.</li><li>Protection logicielle : mot de passe à l'enregistrement (OpenOffice), ou archive chiffrée (7-Zip, AES-256).</li></ul>
+<h3>Bonnes pratiques (Pix 4.1 / 4.2 / 4.3)</h3>
+<div class="grid"><div class="card"><span class="tag" style="background:var(--d4)">4.1</span>Mots de passe longs et uniques, gestionnaire de mots de passe, authentification multifacteur, mises à jour, sauvegardes, verrouillage des appareils, prudence avec Wi-Fi et clés USB.</div><div class="card"><span class="tag" style="background:var(--d4)">4.2</span>Donnée personnelle ou sensible, minimisation, paramètres de confidentialité, géolocalisation, cookies et traçage, pseudonymisation. Se demander : pourquoi, par qui, pour combien de temps, avec quelle visibilité ?</div><div class="card"><span class="tag" style="background:var(--d4)">4.3</span>Ergonomie, pauses, notifications, cyberharcèlement, accessibilité, empreinte environnementale, durée de vie des équipements, réemploi, sobriété numérique.</div></div>
+<div class="card"><b>Réflexes :</b> ne jamais ouvrir une pièce jointe d'origine inconnue (l'identité d'un ami peut être usurpée) · ne jamais répondre à un pourriel (tu confirmes que ton adresse est valide) · ne pas publier son adresse e-mail · ne pas installer de logiciel douteux et lire la licence · garder l'antivirus à jour.</div></section>
+
+<section id="fmt" style="--c:var(--d2)"><h2>5. Interopérabilité et formats de fichiers</h2><p class="sub">Cours D5.3</p>
+<div class="def"><b>Norme</b>Référentiel publié par un organisme de normalisation (ISO, IEEE, AFNOR) après consensus. Ex : Wi-Fi = IEEE 802.11 ; OpenDocument = ISO 26300.</div>
+<div class="def"><b>Standard</b>Référentiel publié par une autre entité et très utilisé en pratique. <b>Ouvert</b> s'il est diffusé librement, <b>fermé</b> sinon.</div>
+<div class="grid"><div class="card"><b>Compatibilité</b><br>Capacité de deux systèmes à fonctionner ensemble.</div><div class="card"><b>Interopérabilité</b><br>Capacité d'un système, dont les interfaces sont intégralement connues, à fonctionner avec d'autres (grâce à une norme ou un standard ouvert).</div></div>
+<table><tr><th>Monde ouvert</th><th>Monde propriétaire</th></tr><tr><td>Standards ouverts. Les formats OpenOffice odt, ods, odp sont ouverts : tout éditeur peut les gérer.</td><td>Format non (ou partiellement) publié pour des raisons commerciales, ce qui enferme l'utilisateur. Le .doc de Microsoft est propriétaire (pertes d'informations ailleurs) ; le .docx (2007) est un peu plus interopérable. Beaucoup de messageries instantanées sont incompatibles (protocoles propriétaires).</td></tr></table>
+<h3>Les images</h3>
+<figure><svg viewBox="0 0 700 200" role="img" aria-label="Vectoriel et matriciel">
+<text x="40" y="20" font-size="15" font-weight="800">Vectoriel (SVG) : zoom net</text><circle cx="120" cy="110" r="60" fill="#3da5f0" stroke="var(--ink)" stroke-width="3"/><circle cx="100" cy="95" r="7" fill="var(--ink)"/><circle cx="140" cy="95" r="7" fill="var(--ink)"/><path d="M90 130 Q120 155 150 130" fill="none" stroke="var(--ink)" stroke-width="4"/>
+<text x="380" y="20" font-size="15" font-weight="800">Matriciel (pixels) : zoom pixellisé</text>
+<g shape-rendering="crispEdges" fill="#3da5f0"><rect x="430" y="60" width="20" height="20"/><rect x="450" y="60" width="20" height="20"/><rect x="470" y="60" width="20" height="20"/><rect x="490" y="60" width="20" height="20"/><rect x="410" y="80" width="20" height="20"/><rect x="430" y="80" width="20" height="20"/><rect x="450" y="80" width="20" height="20"/><rect x="470" y="80" width="20" height="20"/><rect x="490" y="80" width="20" height="20"/><rect x="510" y="80" width="20" height="20"/><rect x="410" y="100" width="20" height="20"/><rect x="430" y="100" width="20" height="20"/><rect x="450" y="100" width="20" height="20"/><rect x="470" y="100" width="20" height="20"/><rect x="490" y="100" width="20" height="20"/><rect x="510" y="100" width="20" height="20"/><rect x="430" y="120" width="20" height="20"/><rect x="450" y="120" width="20" height="20"/><rect x="470" y="120" width="20" height="20"/><rect x="490" y="120" width="20" height="20"/></g>
+<text x="400" y="170" font-size="12">grille de points, chacun avec une couleur</text></svg><figcaption>Vectoriel = objets géométriques décrits par des fonctions mathématiques. Matriciel (bitmap, raster) = grille de pixels.</figcaption></figure>
+<ul><li><b>Vectoriel</b> : agrandissement sans perte ; dessins techniques, cartographie. Formats : <b>svg</b> (ouvert), <b>odg</b> (ouvert), wmf/emf (Microsoft).</li><li><b>Matriciel</b> : <b>résolution spatiale</b> = nombre de pixels ; <b>dynamique</b> = nombre de couleurs. L'agrandissement dégrade l'image.</li></ul>
+<table><tr><th>Format</th><th>Compressé ?</th><th>Usage</th></tr>
+<tr><td>BMP</td><td>Non</td><td>Simple, fichiers énormes, rare sur le web</td></tr>
+<tr><td>JPEG / JPG</td><td>Oui, avec perte</td><td>Photos, 16 M de couleurs ; perte de netteté sur les contours</td></tr>
+<tr><td>GIF</td><td>Oui</td><td>Dessins, 256 couleurs, transparence, animation, affichage entrelacé</td></tr>
+<tr><td>PNG</td><td>Oui, sans perte</td><td>Pas limité à 256 couleurs ; moins performant que JPG pour les photos</td></tr></table>
+<p>Profondeur de couleur : 8 bits → 2<sup>8</sup> = 256 couleurs (colormap). 24 bits (3 octets) → 2<sup>24</sup> = <b>16 millions</b> (True Color).</p>
+<div class="card"><b>Exemple (taille d'un BMP).</b> Photo 900 × 600 px = 540 000 pixels. BMP 24 bits : 540 000 × 3 = <b>1 620 000 o ≈ 1,54 Mo</b>. (Le cours écrit 3600 par erreur.) Tailles mesurées : JPG 100 % 379 Ko · JPG 50 % 41 Ko · GIF 274 Ko · PNG 231 Ko.<br>Une photo de 6 Mpx (3072 × 2048) ferait 18,9 Mo en BMP contre 2,25 Mo en JPG.</div>
+<h3>Le son</h3>
+<p>Le son est numérisé par <b>échantillonnage</b> : on mesure la pression de l'air à intervalles réguliers. <b>Fréquence d'échantillonnage</b> : CD 44,1 kHz, radio 22,05 kHz, téléphone 8 kHz. <b>Résolution</b> : bits par échantillon (8 bits → 256 valeurs, 16 bits → 65 536). C'est la modulation d'impulsion codée, <b>PCM</b>.</p>
+<div class="card"><b>5 min en qualité CD, stéréo, 16 bits :</b> 44 100 × 2 o × 2 voies = 176 400 o/s → × 300 s = <b>52,9 Mo (≈ 50 Mo)</b>.</div>
+<ul><li>Non compressés : <b>cda</b> (CD audio), <b>wav</b> (Microsoft), <b>aif</b> (Apple).</li><li>Compressés : <b>mp3</b> (pertes, licence payante en usage commercial), <b>wma</b> (propriétaire, protection contre la copie), <b>ogg</b> (ouvert, libre, streaming), <b>aac / m4a</b> (Apple).</li></ul>
+<h3>La vidéo</h3>
+<p>Vidéo = suite d'images (25 par seconde) + son.</p>
+<div class="card"><b>1 min, 720 × 576, vraies couleurs :</b> 720 × 576 × 3 × 25 × 60 = <b>1 866 240 000 o ≈ 1,7 Go</b>. Le son ne fait que 10,6 Mo : les images dominent, donc la compression est indispensable (3 min ne tiendraient pas sur un DVD de 4,7 Go).</div>
+<div class="def"><b>Codec</b>Algorithme de compression/décompression de fichiers multimédias (son et vidéo). <b>Débit binaire</b> : nombre de bits pour coder une seconde. CD non compressé = 44 100 × 16 × 2 = 1 411 200 bit/s (≈ 1 378 kibit/s). À 128 kbit/s, le fichier est ~11 fois plus petit. Un morceau de 3 min : 30 Mo → 2,8 Mo.</div>
+<ul><li><b>M-JPEG</b> : JPEG sur chaque image, bien pour le montage, mauvais pour le streaming. <b>MPEG</b> : ne code que les différences entre images. MPEG-1 (CD), MPEG-2 (DVD, TV numérique), MPEG-4 (web, mobile, streaming). <b>DivX</b> : codec propriétaire basé sur MPEG-4, un film tient sur ~700 Mo.</li><li>Conteneurs : <b>avi</b> (Microsoft), <b>mpg/mp2/mp4</b>, <b>mov</b> (QuickTime/Apple), <b>flv</b> (Flash).</li></ul></section>
+
+<section id="data" style="--c:var(--d1)"><h2>6. Pérenniser ses données</h2><p class="sub">Cours D1.4</p>
+<div class="warn">On travaille dans la mémoire vive, qui est <b>volatile</b> : elle s'efface quand on éteint. Il faut enregistrer sur un support de stockage.</div>
+<div class="def"><b>Ouvrir</b>Charger un fichier dans la mémoire. <b>Enregistrer</b>L'écrire sur un support de stockage. Dupliquer : copier/coller ou « Enregistrer sous ».</div>
+<h3>Versions et noms de fichiers</h3>
+<ul><li>Versions : fichiers différents (<code>Sujet23_Vers_01.odt</code>, <code>_02</code>) ou fonction de versioning du logiciel dans un même fichier.</li><li>Garder le même ordre d'informations (sujet, date, auteur) et mettre la date <b>à l'envers</b>.</li></ul>
+<table><tr><th>À éviter</th><th>À conseiller</th></tr><tr><td><code>EXPOSE_15112009.odt</code><br><code>EXPOSE_09122009.odt</code><br>(classés par jour, pas par date)</td><td><code>EXPOSE_20091105.odt</code><br><code>EXPOSE_20091209_Herve.odt</code><br>(ordre chronologique + dernier contributeur)</td></tr></table>
+<p><b>Dossiers spéciaux :</b> Bureau (éléments du fond d'écran), Corbeille (fichiers détruits), Documents / Images / Musique.</p>
+<h3>Archive et compression</h3>
+<div class="def"><b>Archive</b>Fichier unique pouvant contenir une arborescence de dossiers et de fichiers. Utile pour les pièces jointes, un téléchargement en un clic, un stockage structuré. Souvent compressée, mais ce n'est pas obligatoire.</div>
+<table><tr><th>Avec perte</th><th>Sans perte</th></tr><tr><td>Plus petit en acceptant de légères pertes de qualité : jpg, mp3.</td><td>Plus petit sans aucune perte, via un logiciel (7-Zip) qui remplace les éléments répétitifs par un code plus court. Gain important sur txt/bmp, insignifiant sur un format déjà compressé comme jpg.</td></tr></table>
+<p>Compresser → archive → décompresser redonne le fichier identique ; gain de temps (transfert) et de place. Le destinataire a besoin d'un logiciel de décompression, ou on envoie une <b>archive auto-extractible</b>.</p></section>
+
+<section id="c2i" style="--c:var(--d5)"><h2>7. Diapos C2i D1 : contenu complémentaire</h2><p class="sub">Tiré de D1_Maitrise_1516.pdf (146 diapositives). Uniquement ce qui s'ajoute aux sections précédentes.</p>
+<h3>Histoire et matériel</h3>
+<table><tr><th>Année</th><th>Étape</th></tr><tr><td>1971</td><td>Intel 4004, premier microprocesseur (4 bits, 2 300 transistors)</td></tr><tr><td>1976-77</td><td>Apple 1, puis Apple II, Commodore PET : premières machines grand public</td></tr><tr><td>1978</td><td>Intel 8086 (16 bits)</td></tr><tr><td>1984</td><td>Macintosh : interface graphique + souris. Les compatibles PC s'imposent (IBM, Compaq, Dell, HP...)</td></tr></table>
+<ul><li><b>Loi de Moore</b> (empirique) : la puissance des processeurs double environ tous les 18 mois.</li><li>Démarrage : la ROM exécute le <b>BIOS</b> (vérifie le matériel) → chargement du <b>système d'exploitation</b> (Windows, Linux, Mac OS).</li><li>Caractéristiques : puissance du <b>processeur</b> (rapidité), <b>RAM</b> (volatile, exécute les programmes en cours), capacité de stockage, système d'exploitation, connectique.</li><li><b>Ports :</b> USB (branchement à chaud), Ethernet RJ45 (réseau local), VGA (écran analogique), HDMI (écran numérique haute définition).</li><li>Un nouveau périphérique peut nécessiter un <b>pilote (driver)</b> qui permet au système de le gérer ; le Plug and Play le télécharge automatiquement.</li></ul>
+<h3>L'environnement de travail</h3>
+<p>= un poste de travail et ses périphériques, des applications (locales ou sur des serveurs distants), des espaces de stockage (locaux ou distants). Services distants = <b>informatique en nuage (cloud)</b> : accessibles de tout appareil connecté, maintenance et sauvegarde assurées par le prestataire.</p>
+<ul><li><b>Comptes :</b> un seul utilisateur = l'<b>administrateur</b> ; un poste multi-utilisateurs demande une identification puis ouvre une session selon le profil (administrateur, usager, invité). Seul l'administrateur installe des logiciels.</li><li><b>Gestionnaire de fichiers</b> = l'explorateur (Windows), le navigateur de fichiers (Linux), le Finder (Mac).</li><li><b>ENT</b> : point d'accès unique intégrant tous les services liés à son activité. Aussi : plateforme de travail collaboratif, plateforme pédagogique, réseau social. <b>Avant de publier en ligne, se demander qui pourra y accéder.</b></li></ul>
+<h3>Adresses IP</h3>
+<p>IPv4 = 32 bits (≈ 4 milliards d'adresses, pénurie). IPv6 = 128 bits (16 octets, ≈ 10<sup>38</sup> adresses). Sur un réseau local ou une box, on partage une IP extérieure commune et on a une IP locale. Réseaux Wi-Fi : <b>sécurisés</b> (clé WEP/WPA) ou <b>non sécurisés</b> (portail captif demandant identification ou paiement).</p>
+<h3>Les logiciels</h3>
+<ul><li><b>Application</b> (destinée aux utilisateurs) et <b>logiciel système</b> (entre applications et matériel). Installation par CD ou exécutable téléchargé, droits d'administrateur et parfois clé de licence.</li><li><b>Mise à jour</b> pour corriger bugs et failles de sécurité. <b>Désinstaller</b> avec la procédure prévue, jamais en supprimant le dossier. L'icône du bureau n'est qu'un <b>raccourci</b> : le supprimer ne désinstalle pas.</li><li>Exemples : suite bureautique (OpenOffice libre / Microsoft Office propriétaire), navigateur (Firefox, Chrome), client de messagerie (Thunderbird ; indiquer serveur entrant, serveur sortant, adresse), traitement d'image (GIMP), lecteur PDF, antivirus, compression (7-Zip).</li></ul>
+<h3>Fichiers et stockage</h3>
+<ul><li><b>Stockage</b> (la RAM ne conserve rien) : disque dur, supports amovibles (clé USB, carte mémoire, disque dur externe, CD/DVD/BD), espaces en ligne (ENT, serveur de fichiers distant via FTP). Optiques : -ROM lecture seule, -R écriture une fois, -RW/-RE réinscriptible.</li><li><b>Arborescence</b> : fichiers dans des dossiers et sous-dossiers. Windows : <code>C:\Alex\C2i\D1\Fiche.odt</code> (chemin absolu depuis la racine <code>C:</code>) ; relatif : <code>..\C2i\D1</code> où <code>..</code> = dossier parent. Linux : <code>/home/Alex/C2i/D1/Fiche.odt</code>.</li><li><b>Extension</b> = suffixe du nom. <b>Format</b> = façon de coder l'information : ce n'est pas pareil ! Renommer .png en .jpg ne convertit RIEN ; il faut « Enregistrer sous » un autre type.</li><li><b>Libellés (tags)</b> : plusieurs par fichier, plus souple que les dossiers (un seul dossier possible). Supprimer un raccourci ne supprime pas le fichier.</li><li><b>Fichiers texte</b> (lisibles par tout éditeur) : txt, csv, html, odf (XML). <b>Fichiers binaires</b> : doc, jpg, exécutables.</li><li>Obsolescence : les formats et supports vieillissent, donc convertir les anciens fichiers et recopier les sauvegardes. Disquette 360 ko (1981) → 1,44 Mo → CD 700 Mo → clé USB 2 à 32 Go.</li></ul>
+<h3>Enregistrer et sauvegarder</h3>
+<div class="def"><b>Ouvrir</b> = charger en mémoire. <b>Enregistrer</b> = écrire sur un support. <b>Sauvegarder</b> = dupliquer pour faire une copie de sécurité.</div>
+<ul><li>Sauvegarder sur un support <b>externe</b> (un autre dossier du même disque ne sert à rien si le disque lâche). S'envoyer le fichier par courriel est une sauvegarde simple.</li><li>Sauvegarder toutes les données chaque semaine/mois, les fichiers modifiés chaque jour. Inutile de sauvegarder les applications.</li></ul>
+<h3>Formats de documents</h3>
+<table><tr><th>Type</th><th>Ouvert / interopérable</th><th>Propriétaire</th></tr>
+<tr><td>Texte</td><td>txt, rtf, <b>odt</b>, docx (OOXML)</td><td>doc</td></tr><tr><td>Classeur</td><td>csv (texte, sans formules), <b>ods</b>, xlsx</td><td>xls</td></tr><tr><td>Présentation</td><td><b>odp</b>, pptx, html (en ligne)</td><td>ppt</td></tr><tr><td>Mise en page figée</td><td colspan="2"><b>PDF</b> : préserve la mise en forme, pas fait pour être modifié</td></tr></table>
+<p>Images : JPEG conseillé pour les photos ; GIF/PNG pour les dessins. GIF utilise une palette indexée de 256 couleurs ; la palette PNG n'est pas limitée. Audio/vidéo : wma (propriétaire), mp3 (ouvert, avec pertes), MPEG-4 (vidéo).</p>
+<h3>Traces et vie privée</h3>
+<ul><li>Traces de navigation : <b>historique</b> (URL), signets, <b>cache</b> (fichiers gardés pour afficher plus vite à la 2<sup>e</sup> visite), téléchargements.</li><li><b>Cookie</b> : petit fichier texte enregistré par le navigateur. Types : identification (rester connecté), préférence (langue), publicitaire (pubs ciblées).</li><li>Les mots de passe enregistrés peuvent souvent s'afficher en clair. Utiliser la <b>navigation privée</b>, effacer historique/cookies, refuser l'enregistrement des mots de passe.</li><li>Espace distant : espace privé, mot de passe complexe, déconnexion de la session.</li></ul>
+<h3>Précisions sur les malwares</h3>
+<ul><li><b>Types de virus :</b> virus de boot (chargé au démarrage), virus d'application (infecte un exécutable), <b>macrovirus</b> (infecte les documents bureautiques).</li><li>Le <b>ver</b> ne s'implante pas dans un autre programme. Le <b>cheval de Troie</b> ne se reproduit pas. Le <b>publiciel</b> affiche des pubs et transmet des données pour les adapter ; souvent associé à un gratuiciel, assimilé aux logiciels espions.</li><li>Extensions exécutables dangereuses : exe, sys, com, jar. Télécharger sur les sites officiels. Tu es le meilleur antivirus !</li></ul>
+<h3>La réparation</h3>
+<table><tr><th>Symptôme</th><th>Réaction</th></tr><tr><td>Ne démarre pas</td><td>Ancienne version du système ou <b>mode sans échec</b> (touche indiquée au lancement du BIOS, ex. F2)</td></tr><tr><td>Ne rend pas la main</td><td>Forcer l'arrêt de l'application au clavier ; sinon appui long sur l'interrupteur (ne pas débrancher)</td></tr><tr><td>Arrêt soudain</td><td>Suivre les conseils à l'écran, redémarrer ; si ça recommence, désinstaller la dernière application / restaurer un état antérieur ; en dernier recours, réinstaller le système (créer tôt les DVD de restauration)</td></tr></table>
+<p>Origines : intégrité compromise lors d'une installation ou mise à jour, un <b>bogue (bug)</b>, un logiciel malveillant ou un pirate.</p>
+<h3>Unités (précisément)</h3>
+<p>La vraie conversion utilise 1024 = 2<sup>10</sup> : 1 Kio = 1 024 o · 1 Mio = 1 048 576 o · 1 Gio = 1 073 741 824 o. Les « ko/Mo » du quotidien sont un abus de notation.</p></section>
+
+<section id="d2" style="--c:var(--d2)"><h2>8. Support pédagogique Pix : domaines 2, 4, 5</h2>
+<h3><span class="tag" style="background:var(--d2)">2.1</span>Interagir</h3>
+<p>Courriel et messagerie, objet et structure du message, pièces jointes et liens, agenda numérique, choix du canal, nétiquette, accessibilité. <i>Activité :</i> écrire à un enseignant avec un objet précis, le contexte, une demande claire, une pièce jointe bien nommée et une formule de politesse. <b>À retenir :</b> le bon outil et le bon ton dépendent du contexte, du destinataire et de l'urgence.</p>
+<h3><span class="tag" style="background:var(--d2)">2.2</span>Partager et publier</h3>
+<p>Paramètres de visibilité (public, privé, partagé), liens de partage, droit d'auteur, licences, citation des sources, modération, traces, réputation en ligne. Avant de publier, vérifier l'origine, la licence, les personnes concernées, puis régler l'audience. <b>Publier laisse une trace.</b></p>
+<h3><span class="tag" style="background:var(--d2)">2.3</span>Collaborer</h3>
+<p>Édition simultanée, commentaires et suggestions, historique des versions, droits, répartition des tâches, organisation des fichiers, réunions en ligne, conflits de versions. <i>Activité :</i> document collaboratif avec rôles, convention de nommage et procédure de validation. <b>À retenir :</b> collaborer demande des règles communes, pas seulement un outil.</p>
+<h3><span class="tag" style="background:var(--d2)">2.4</span>S'insérer dans le monde numérique</h3>
+<p>Identité numérique, services en ligne, réseaux sociaux, citoyenneté numérique, participation et expression, accessibilité et inclusion, esprit critique face aux plateformes. <i>Activité :</i> analyser un profil fictif (informations publiques, risques d'exposition, améliorations).</p>
+<h3><span class="tag" style="background:var(--d5)">5.1</span>Résoudre des problèmes techniques</h3>
+<figure><svg viewBox="0 0 700 120" role="img" aria-label="Étapes de diagnostic">
+<g class="k"><rect x="10" y="40" width="100" height="44" rx="6"/><rect x="130" y="40" width="100" height="44" rx="6"/><rect x="250" y="40" width="100" height="44" rx="6"/><rect x="370" y="40" width="100" height="44" rx="6"/><rect x="490" y="40" width="100" height="44" rx="6"/></g>
+<g font-size="12.5"><text x="22" y="66">Symptôme</text><text x="140" y="66">Câbles/Wi-Fi</text><text x="258" y="66">Autre appareil</text><text x="380" y="66">Redémarrer</text><text x="502" y="66">Paramètres</text></g>
+<g stroke="var(--ink)" stroke-width="2"><path d="M110 62 H130 M230 62 H250 M350 62 H370 M470 62 H490"/></g>
+<rect x="600" y="40" width="90" height="44" rx="6" fill="var(--d5)"/><text x="616" y="66" font-size="12.5" style="fill:#fff">Assistance</text><path d="M590 62 H600" stroke="var(--ink)" stroke-width="2"/></svg><figcaption>Plus d'Internet ? Procéder étape par étape, ne modifier que le nécessaire.</figcaption></figure>
+<p>Identifier le symptôme, reproduire le problème, vérifier les branchements, redémarrer et tester, vérifier réseau et paramètres, mettre à jour, consulter la documentation, isoler la cause, sauvegarder avant toute intervention sensible.</p>
+<h3><span class="tag" style="background:var(--d5)">5.2</span>Construire un environnement numérique</h3>
+<p>Matériel et périphériques, processeur / mémoire / stockage, système d'exploitation, applications, réseau et Internet, cloud, formats et compatibilité, comptes et droits. Le choix dépend du <b>besoin, de la compatibilité, de la sécurité, du coût et de la durabilité</b>.</p></section>
+
+<section id="lab" style="--c:var(--d3)"><h2>9. TP et glossaire</h2>
+<h3>La fiche d'identité de ton ordinateur</h3>
+<p>La fiche demande : nom de l'ordinateur, système d'exploitation, processeur, RAM, IP interne, adresse MAC, passerelle, serveur DHCP, serveur DNS, IP publique.</p>
+<table><tr><th>Élément</th><th>Windows</th><th>Linux</th></tr>
+<tr><td>Nom, système</td><td><code>hostname</code>, <code>winver</code></td><td><code>hostname</code>, <code>cat /etc/os-release</code></td></tr>
+<tr><td>Processeur, RAM</td><td>Gestionnaire des tâches &gt; Performance</td><td><code>lscpu</code>, <code>free -h</code></td></tr>
+<tr><td>IP, MAC, passerelle, DHCP, DNS</td><td><code>ipconfig /all</code></td><td><code>ip a</code>, <code>ip route</code>, <code>resolvectl status</code></td></tr>
+<tr><td>IP publique</td><td colspan="2">Un site « quelle est mon IP », ou <code>curl ifconfig.me</code></td></tr></table>
+<h3>Définitions à connaître</h3>
+<table><tr><th>Terme</th><th>Définition</th></tr>
+<tr><td>Hameçonnage</td><td>Fraude où l'on se fait passer pour un tiers de confiance afin de voler des données personnelles.</td></tr>
+<tr><td>Cookie</td><td>Petit fichier texte enregistré par un site dans le navigateur pour te reconnaître (connexion, préférences) et parfois te suivre.</td></tr>
+<tr><td>Espiogiciel</td><td>Logiciel qui collecte secrètement tes informations et les envoie à un tiers.</td></tr>
+<tr><td>Pourriel</td><td>Courriel publicitaire envoyé en masse sans sollicitation.</td></tr>
+<tr><td>Ver</td><td>Logiciel malveillant qui se propage seul sur les réseaux, sans programme hôte.</td></tr>
+<tr><td>Trojan (cheval de Troie)</td><td>Logiciel malveillant déguisé en programme légitime, souvent pour ouvrir une porte dérobée.</td></tr>
+<tr><td>Base virale</td><td>Liste des signatures virales connues de l'antivirus, mise à jour régulièrement.</td></tr></table></section>
+
+<section id="quiz" style="--c:var(--d4)"><h2>10. Auto-test</h2><p class="sub">Réponds dans ta tête, puis ouvre.</p>
+<details><summary>Combien de valeurs sur 8 bits ? Sur 10 bits ?</summary><p>2<sup>8</sup> = 256 ; 2<sup>10</sup> = 1 024.</p></details>
+<details><summary>Un fichier de 15 Mo sur une ligne à 2048 kbit/s : temps de téléchargement ?</summary><p>2048 ÷ 8 = 256 ko/s. 15 000 ko ÷ 256 ≈ 58,6 s au mieux (avec 1 Mo = 1000 ko).</p></details>
+<details><summary>Internet et le web ?</summary><p>Internet est le réseau ; le web est un service qui l'utilise.</p></details>
+<details><summary>POP3 ou IMAP ?</summary><p>POP3 télécharge le courrier sur ta machine ; IMAP le laisse sur le serveur, synchronisé.</p></details>
+<details><summary>Que cache un proxy ?</summary><p>Ton adresse IP : la cible ne voit que celle du proxy.</p></details>
+<details><summary>Virus, ver, cheval de Troie : différence clé ?</summary><p>Le virus a besoin d'un programme hôte ; le ver se propage seul ; le cheval de Troie se fait passer pour utile.</p></details>
+<details><summary>Quel format pour une photo ? Pour un logo redimensionnable ?</summary><p>JPEG pour une photo ; SVG (vectoriel) pour un logo redimensionnable.</p></details>
+<details><summary>Meilleur nom pour la version du 5 novembre 2009 ?</summary><p>EXPOSE_20091105.odt (la date à l'envers se classe chronologiquement).</p></details>
+<details><summary>Norme et standard ; compatible et interopérable ?</summary><p>Norme : issue d'un organisme de normalisation. Standard : référentiel très utilisé, publié par toute entité. Compatible : conçu pour fonctionner ensemble. Interopérable : fonctionne avec d'autres grâce à des interfaces connues/ouvertes.</p></details>
+<details><summary>Confidentialité et intégrité ?</summary><p>Confidentialité : seules les personnes autorisées y accèdent. Intégrité : l'information est exacte, complète et non altérée.</p></details>
+<details><summary>Repère les indices d'hameçonnage.</summary><p>Expéditeur bizarre, urgence artificielle, lien trompeur, pièce jointe inattendue, demande inhabituelle de données.</p></details>
+<details><summary>Étapes de diagnostic pour « plus d'Internet » ?</summary><p>Wi-Fi/câbles, connexion locale, tester un autre appareil, redémarrer, paramètres réseau, puis assistance.</p></details>
+</section>
+</main>
+<script>
+var r=document.documentElement,b=document.getElementById('th');
+b.onclick=function(){var d=(r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'))==='dark';r.dataset.theme=d?'light':'dark'}
+</script>
+</body></html>
